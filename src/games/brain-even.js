@@ -1,8 +1,9 @@
 import getRandomIntInclusive from '../utils.js';
 
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const isEven = (number) => number % 2 === 0;
 const getAnswer = (number) => (isEven(number) ? 'yes' : 'no');
-const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 /**
  * every call function from this module
