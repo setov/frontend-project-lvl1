@@ -13,3 +13,11 @@
 ### asciinema for step 5
 
 [![asciicast](https://asciinema.org/a/VHDNnB9ZktGMXJYcCmrPkdRkN.svg)](https://asciinema.org/a/VHDNnB9ZktGMXJYcCmrPkdRkN)
+
+### asciinema for step 6
+
+[![asciicast](https://asciinema.org/a/MaF23w29k22O9KWREemfrJXlD.svg)](https://asciinema.org/a/MaF23w29k22O9KWREemfrJXlD)
+
+### asciinema for step 7
+
+[![asciicast](https://asciinema.org/a/H7TOUOFtV8pMpOho99c5BSast.svg)](https://asciinema.org/a/H7TOUOFtV8pMpOho99c5BSast)
