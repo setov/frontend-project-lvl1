@@ -1,4 +1,5 @@
 import getRandomIntInclusive from '../utils.js';
+import run from '../index.js';
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
@@ -12,7 +13,7 @@ const gcd = (a, b) => {
 /**
  * every call function from this module
  * generate new random question, answer data.
- * @returns {String[]} [description, question, answer]
+ * @returns {String[]} [question, answer]
  */
 
 const generate = () => {
@@ -22,7 +23,7 @@ const generate = () => {
   const answer = String(gcd(a, b));
   const question = `${a} ${b}`;
 
-  return [DESCRIPTION, question, answer];
+  return [question, answer];
 };
 
-export default generate;
+export default () => run(DESCRIPTION, generate);

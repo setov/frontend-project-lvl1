@@ -1,4 +1,5 @@
 import getRandomIntInclusive from '../utils.js';
+import run from '../index.js';
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = ['-', '+', '*'];
@@ -10,7 +11,7 @@ const EXPRESSIONS = {
 /**
  * every call function from this module
  * generate new random question, answer data.
- * @returns {String[]} [description, question, answer]
+ * @returns {String[]} [question, answer]
  */
 const generate = () => {
   const a = getRandomIntInclusive(1, 20);
@@ -21,7 +22,7 @@ const generate = () => {
   const answer = String(EXPRESSIONS[operation](a, b));
   const question = `${a} ${operation} ${b}`;
 
-  return [DESCRIPTION, question, answer];
+  return [question, answer];
 };
 
-export default generate;
+export default () => run(DESCRIPTION, generate);

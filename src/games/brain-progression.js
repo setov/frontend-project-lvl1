@@ -1,4 +1,5 @@
 import getRandomIntInclusive from '../utils.js';
+import run from '../index.js';
 
 const DESCRIPTION = 'What number is missing in the progression?';
 const SIZE = 10;
@@ -12,7 +13,7 @@ const getArrayWithHiddenElement = (arr, hiddenIndex = 0, char = '..') => arr
 /**
  * every call function from this module
  * generate new random question, answer data.
- * @returns {String[]} [description, question, answer]
+ * @returns {String[]} [question, answer]
  */
 const generate = () => {
   const startAt = getRandomIntInclusive(2, 20);
@@ -22,6 +23,7 @@ const generate = () => {
   const hiddenIndex = getRandomIntInclusive(1, length);
   const answer = String(progression[hiddenIndex]);
   const question = getArrayWithHiddenElement(progression, hiddenIndex).join(' ');
-  return [DESCRIPTION, question, answer];
+  return [question, answer];
 };
-export default generate;
+
+export default () => run(DESCRIPTION, generate);
