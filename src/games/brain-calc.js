@@ -3,6 +3,8 @@ import run from '../index.js';
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = ['-', '+', '*'];
+const MIN_OPERAND = 1;
+const MAX_OPERAND = 20;
 const EXPRESSIONS = {
   '-': (a, b) => a - b,
   '+': (a, b) => a + b,
@@ -14,8 +16,8 @@ const EXPRESSIONS = {
  * @returns {String[]} [question, answer]
  */
 const generate = () => {
-  const a = getRandomIntInclusive(1, 20);
-  const b = getRandomIntInclusive(1, 20);
+  const a = getRandomIntInclusive(MIN_OPERAND, MAX_OPERAND);
+  const b = getRandomIntInclusive(MIN_OPERAND, MAX_OPERAND);
 
   const randomIndex = Math.floor(Math.random() * OPERATIONS.length);
   const operation = OPERATIONS[randomIndex];

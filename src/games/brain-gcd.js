@@ -3,11 +3,11 @@ import run from '../index.js';
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (a, b) => {
+const getGcd = (a, b) => {
   if (b === 0) {
     return a;
   }
-  return gcd(b, a % b);
+  return getGcd(b, a % b);
 };
 
 /**
@@ -20,7 +20,7 @@ const generate = () => {
   const a = getRandomIntInclusive(2, 50);
   const b = getRandomIntInclusive(2, 100);
 
-  const answer = String(gcd(a, b));
+  const answer = String(getGcd(a, b));
   const question = `${a} ${b}`;
 
   return [question, answer];
